@@ -1,11 +1,11 @@
 #include "definicoes.h"
 #include <stdio.h>
+#include <string.h>
 
 #define MAX_LINE_LENGTH 1024
 
 void csv_to_bin(const char* csv_file, const char* bin_file){
     char linha[MAX_LINE_LENGTH];
-    char separador = ";";
     FILE *f_csv, *f_bin;
 
     f_csv = fopen(csv_file, "r");
@@ -38,7 +38,7 @@ void csv_to_bin(const char* csv_file, const char* bin_file){
 }
 
 int main(){
-    csv_to_bin();
+    csv_to_bin("alimentos.csv", "dados.bin");
     return 0;
 }
 
